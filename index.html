@@ -1,0 +1,192 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Virtual Surprise Box</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap');
+
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to bottom right, #ffd1dc, #ffe5ec);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 40px 20px;
+    }
+
+    h1 {
+      font-size: 3em;
+      color: #ff4f81;
+      margin-bottom: 10px;
+    }
+
+    .box {
+      width: 90%;
+      max-width: 800px;
+      background: white;
+      border-radius: 15px;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+      overflow: hidden;
+    }
+
+    .tabs {
+      display: flex;
+      background: #ff4f81;
+    }
+
+    .tabs button {
+      flex: 1;
+      padding: 15px;
+      border: none;
+      background: #ff4f81;
+      color: white;
+      font-weight: 600;
+      font-size: 1em;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .tabs button:hover,
+    .tabs button.active {
+      background: #ff99b5;
+    }
+
+    .content {
+      padding: 30px;
+      display: none;
+    }
+
+    .content.active {
+      display: block;
+    }
+
+    .letter {
+      white-space: pre-wrap;
+      font-size: 1.1em;
+      line-height: 1.6;
+    }
+
+    .gallery img {
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 10px;
+      margin: 10px;
+      transition: 0.3s;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
+
+    .roast {
+      font-size: 1.1em;
+      color: #333;
+      line-height: 1.8;
+    }
+
+    .quiz {
+      font-size: 1.1em;
+    }
+
+    .puzzle {
+      font-size: 1.2em;
+      font-weight: bold;
+      text-align: center;
+      padding: 30px;
+    }
+  </style>
+</head>
+<body>
+  <h1>🎁 Surprise Box for butkii🎀</h1>
+
+  <div class="box">
+    <div class="tabs">
+      <button class="tab-btn active" onclick="openTab(0)">💌 Letter</button>
+      <button class="tab-btn" onclick="openTab(1)">📷 Memories</button>
+      <button class="tab-btn" onclick="openTab(2)">😂 Roast Zone</button>
+      <button class="tab-btn" onclick="openTab(3)">🌈 Vibe Check</button>
+      <button class="tab-btn" onclick="openTab(4)">🧩 Puzzle</button>
+    </div>
+
+    <div class="content active">
+      <div class="letter">
+        Tu mere lie bhut special hai.. meri jaan ,meri bacchi,meri best friend merii sb kch haiii 😘
+        Tere bina life ka har moment adhoora lagta hai.  
+        Tu hasti hai toh lagta hai duniya safe hai, tu naraz hoti hai toh sab kuch thoda feeka.  
+        Har baar jab tu mujhe hug karti hai ya aankhon se kuch bolti hai, mera dil kehta hai — *haan, bas yhii hai sukoon.*  
+        I love you more than words can explain... tu sirf meri best friend nahi, tu mera sb kch hai..like u r that part which cant be replaced at all…tu har chiz me bs perfect hai…tere sth rhne se meri sari prblm sort ho jati haiii…like i just cant express tu kitnii imp haii mere liee..and u literally play every role in my lyf so perfectlyyy 😭😭
+I just lovee uu alottt darlingg 🥰
+      </div>
+    </div>
+
+    <div class="content">
+      <div class="gallery">
+        <img src="photo1.jpg" alt="Memory 1" />
+        <img src="photo2.jpg" alt="Memory 2" />
+        <img src="photo3.jpg" alt="Memory 3" />
+        <!-- Replace with your actual image file names -->
+      </div>
+    </div>
+
+    <div class="content">
+      <div class="roast">
+        • Bhai tu itni delulu hai ki fr ek cute ladke ne teri story like krdi na to tu shadi ke sapne saza legii 🤯<br>
+        • Mood swings? Matlab weather report se bhi zyada unreliable tu 😭<br>
+        •aur kya bolti h tu ki “inm veryy strong”…abhi uchi awaz me boldu na to rone lgegii 😭<br>
+        • Drama queen toh tu itni hai ki khud drama ko shrm ajae fr 😭<br>
+
+    •tu hai to choti si bacchi lkin gussa aise kregi jaise pta ni kya hogya ho…(chota packet for a reason🥰)<br>
+        • But still, u are my choti si pyari si bacchi,jisko preshan krne me muje bhut maza ata h !!🥰<br>
+
+      •And agr tu chipkali hoti to b muje tere se pyar hota…agr tu chipkali hoti to maine diwar bn jati taki tu pura din mere se chipki rhti🫣<br>
+            •and agr tu madhumakkhi hoti to mai fool bn jati np🥰
+      </div>
+    </div>
+
+<button onclick="roastPopup()">🚨 Check Your Delulu Status</button>
+
+<script>
+  function roastPopup() {
+    alert("Warning: Delulu level high detected 😵‍💫\nPlease drink water and stop imagining everything u saw in influence of nagin💀");
+  }
+</script>
+
+    <div class="content">
+      <div class="quiz">
+        🌈 Are you feeling today like...<br><br>
+        1. 💅 Slay butkii?<br>
+        2. 😭 Senti butkii?<br>
+        3. 🤓 Nerdy butkii?<br>
+        4. 😡 Angry Chhoti Hulk?<br><br>
+
+        → Whatever it is... I still loves you endlessly 😌
+      </div>
+    </div>
+
+    <div class="content">
+      <div class="puzzle">
+        You’ve unlocked all the love hidden in this box 💖<br><br>
+        This is just a website...<br>
+        But every word in it came straight from my heart.<br>
+        — Yours, chotu  🫶🏻
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function openTab(index) {
+      const tabs = document.querySelectorAll(".tab-btn");
+      const contents = document.querySelectorAll(".content");
+
+      tabs.forEach((btn, i) => {
+        btn.classList.toggle("active", i === index);
+        contents[i].classList.toggle("active", i === index);
+      });
+    }
+  </script>
+</body>
+</html>
